@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Login
+    body 
+        section.login 
+            .login__wrapper 
+                .login__head 
+                    h2.login__caption Registrar usuario 
+                    .login__form__wrapper
+                        form(action="/register", method="post").login__form
+                            .login__input-group 
+                                label.login__form__label Email
+                                input.login__form__control(type="email" name="username" required)
+
+                            .login__input-group 
+                                label.login__form__label Nombre
+                                input.login__form__control(type="text" name="name" id="name" required)
+
+                            .login__input-group 
+                                label.login__form__label Contraseña
+                                input.login__form__control(type="password" name="password" required)
+
+                            .login__input-group 
+                                input.login__form__submit(type="submit" name="submit" value="Registrar")
+
+                    

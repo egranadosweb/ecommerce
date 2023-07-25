@@ -1,0 +1,14 @@
+@import "./base/_normalize.scss";
+
+@import "./abstracs/variables";
+@import "./abstracs/extends";
+@import "./abstracs/mixins";
+
+@import "./base/config";
+
+@import "./components/tabla";
+@import "./components/form";
+
+@import "./layouts/menu";
+@import "./layouts/content";
+

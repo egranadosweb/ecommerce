@@ -1,0 +1,108 @@
+.content {
+    position: absolute;
+    background-color: #dad9d9;
+    width: calc(100% - 240px);
+    left: 240px;
+    padding: 2rem;
+    height: auto;
+    overflow: hidden;
+}
+
+.content__wrapper {}
+
+.content__head {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    *{
+        align-self: center;
+    }
+}
+
+
+.content__head__search-box{
+
+}
+
+.content__search-box__form{
+    width: 100%;
+}
+
+.content__form-control {
+    
+    margin-right: 1rem;
+}
+
+.content__form__submit{
+    vertical-align: top;
+}
+
+
+
+
+
+.content__head__profile {
+    display: flex;
+    gap: 2rem;
+}
+
+.content__profile-name{
+    display: block;
+}
+
+.content__avatar-box{
+    display: block;
+}
+
+.content__avatar__logo{
+    position: relative;
+    cursor: pointer;
+}
+
+.content__avatar-notification{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    display: block;
+    background-color: red;
+    border-radius: 50%;
+    padding: .5rem .7rem;
+    //padding: 1rem;
+}
+
+.content__avatar__submenu{
+    visibility: hidden;
+    position: absolute;
+    left: -100%;
+    background-color: white;
+    border-radius: 1rem;
+    ul{
+        padding: 1rem;
+    }
+}
+
+.content__avatar__submenu--show{
+    visibility: visible;
+}
+
+.content__avatar__form{
+    
+}
+
+use{
+    fill: gray;
+    background-color: unset;
+}
+
+
+
+.d-content {}
+
+.d-content__wrapper{}
+
+.d-content__modulo__h1{
+    margin-bottom: 4rem;
+}
+
+
+

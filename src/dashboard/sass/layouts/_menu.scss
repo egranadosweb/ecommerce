@@ -1,0 +1,45 @@
+
+.menu{
+    position: fixed;
+    width: 240px;
+    min-height: 100%;
+    inset: 0;
+    background-color: rgb(27, 36, 63);
+    color: #f2f2f2;
+    overflow: auto;
+    // scrollbar-width: none;
+}
+.menu::-webkit-scrollbar{
+    //display: none;
+}
+.menu__wrapper{ 
+    padding: 2rem;
+}
+.menu__wrapper::-webkit-scrollbar{
+    //display: none;
+}
+.logo__box{
+    margin-bottom: 2rem;
+}
+.logo__icon{
+    margin-bottom: 1rem;
+}
+.logo__text{}
+.menu__module{
+    margin-bottom: 2rem;
+}
+.module__name{
+    margin-bottom: 1.5rem;
+}
+.module__options{}
+.module__options-list{}
+.module__option{
+    margin-bottom: 1rem;
+    vertical-align: middle;
+}
+.module__option-icon{
+    margin-right: .5rem;
+}
+.module__link{}
+.menu__btn-box{}
+.menu__btn__collaps{}

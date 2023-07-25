@@ -1,0 +1,54 @@
+
+extends ../layout.pug
+block content
+    section.d-content__modulo
+    
+        h1.d-content__modulo__h1 Todos los productos
+
+        table.d-content__table 
+            thead
+                tr
+                    th Id
+
+                    th Nombre
+
+                    th Categoria
+
+                    th Marca
+
+                    th Descripcion
+
+                    th Precio
+
+                    th Estado
+
+                    th Acciones
+            
+            if rows 
+                each val in rows
+                    tr
+                        td #{val.id}
+
+                        td #{val.nombre}
+
+                        td #{val.categoria}
+
+                        td #{val.marca}
+
+                        td #{val.descripcion}
+
+                        td #{val.precio}
+
+                        td #{val.estado}
+
+                        td.content__td__form
+                            form(action=`/dashboard/producto/${val.id}/editar` method="get")
+                                button.content__btn.content__btn__edit(type="submit") Editar
+
+                            form.formEliminarProducto(action=`/dashboard/producto/${val.id}/eliminar` method="post")
+                                button.content__btn.content__btn__del(type="submit") Eliminar
+            else
+                p #{msg}
+
+
+        
