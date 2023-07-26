@@ -4,18 +4,9 @@ const DashboardController = require("../../controllers/dashboard/DashboardContro
 const {isAuthenticated} = require("../../utils/utils.functions")
 const db = require("../../config/db")
 
-router.get("/dashboard", (req,res,next) => {
-    if(req.isAuthenticated()){
-       return next() 
-    }
-    console.log("No esta autenticado")
-    res.redirect("/login")
-}, (req,res,next) => {
-    console.log(req)
-    console.log("Esta autenticado")
+router.get("/dashboard", isAuthenticated , (req,res,next) => {
     res.render("dashboard/index")
 })
-
 
 //modulo producto
 router.get("/dashboard/producto/", isAuthenticated, DashboardController.listar)

@@ -9,12 +9,12 @@ window.addEventListener("DOMContentLoaded", (e) => {
     const avatarLogo = document.querySelector(".content__avatar__logo") || null
     const formCrearProducto = document.querySelector("#form_crear_producto")
 
-    if(formCrearProducto){
-        formCrearProducto.addEventListener("sumit", function(e){
-            e.preventDefault()
+    // if(formCrearProducto){
+    //     formCrearProducto.addEventListener("sumit", function(e){
+    //         e.preventDefault()
             
-        })
-    }
+    //     })
+    // }
 
     if(document.querySelector("form")){
         document.querySelectorAll("form").forEach((item, index) => {
@@ -59,9 +59,9 @@ window.addEventListener("DOMContentLoaded", (e) => {
         const inputFilesImg1Ele = document.querySelectorAll(".input__file__img")
 
         inputFilesImg1Ele.forEach((item, index) => {
-            item.addEventListener("click", function(e){
-                // const name = item.name
-                // document.querySelector(`img[name="${name}"]`).src = URL.createObjectURL(this.files[0])
+            item.addEventListener("change", function(e){
+                const name = item.name
+                document.querySelector(`img[name="${name}"]`).src = URL.createObjectURL(this.files[0])
                 console.log(item.value)
             })
         })

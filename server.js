@@ -22,7 +22,7 @@ const mysqlOptions = {
     password: process.env.DB_PASSWORD,
     database: process.env.DB_DATABASE
 }
-
+app.use(express.json())
 const sessionStore = new MySQLStore(mysqlOptions)
 
 app.use(session({//Se debe configurar la session antes de registrar la ruta que se encarga de la authentificacion y del registro del middleware de Passport en este archivo
@@ -47,8 +47,8 @@ app.use("/js", express.static( path.join(__dirname, "/public/dashboard/js")))
 app.set("view engine", "pug")
 app.set("views", path.join(__dirname + "/views"))
 
+
 app.use(logger("combined"))
-app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 app.use(passport.authenticate("session"))//Se debe registrar antes de registrar las rutas
