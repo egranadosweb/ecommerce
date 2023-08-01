@@ -1,0 +1,79 @@
+.d-content__table {
+    width: 100%;
+    text-align: left;
+
+    thead {
+        background-color: white;
+        font-size: 1.2rem;
+    }
+    
+    tr{
+        
+    }
+
+    th,
+    td {
+        padding: 1rem .5rem;
+        border-radius: .5rem;
+        text-align: center;
+    }
+
+    tbody {
+        tr:nth-child(odd) {
+            background-color: #d4d4d4;
+        }
+    }
+    img {
+        width: 100px;
+        border-radius: .5rem;
+    }
+
+    textarea {
+        min-width: 100%;
+    }
+
+    button {
+        background-color: #fff;
+        border: 1px solid rgb(223, 223, 223);
+        padding: .5rem;
+        margin: .5rem;
+    }
+}
+
+.td__id{
+    max-width: 60px;
+}
+.td__nombre{}
+.td__categoria{}
+.td__marca{}
+.td__descripcion{}
+.td__precio{}
+.td__img{
+    width: 100px;
+    img{
+        width: 100%;
+    }
+}
+.td__estado{}
+.td__btn__action__group{
+    width: 150px;
+    height: 100%;
+    div{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+
+    * {
+        background-color: unset;
+    }
+
+    button {
+        border: unset;
+    }
+
+    use {
+        align-self: center;
+    }
+}

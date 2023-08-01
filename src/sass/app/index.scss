@@ -9,6 +9,12 @@
 @import "./components/tabla";
 @import "./components/form";
 
+@import "./theme/main";
+
 @import "./layouts/menu";
 @import "./layouts/content";
+
+@import "./pages/login";
+@import "./pages/register";
+@import "./pages/form__add__section";
 

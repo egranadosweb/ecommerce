@@ -1,9 +1,9 @@
 
 extends ../layout.pug
 block content
-    section.d-content__modulo
+    section.d-content
     
-        h1.d-content__modulo__h1 Todos los productos
+        h1.d-content__h1 Todos los productos
 
         table.d-content__table 
             thead
@@ -20,6 +20,8 @@ block content
 
                     th Precio
 
+                    th Imagen
+
                     th Estado
 
                     th Acciones
@@ -27,26 +29,37 @@ block content
             if rows 
                 each val in rows
                     tr
-                        td #{val.id}
+                        td.td__id #{val.id}
 
-                        td #{val.nombre}
+                        td.td__nombre #{val.nombre}
 
-                        td #{val.categoria}
+                        td.td__categoria #{val.categoria}
 
-                        td #{val.marca}
+                        td.td__marca #{val.marca}
 
-                        td #{val.descripcion}
+                        td.td__descripcion #{val.descripcion}
 
-                        td #{val.precio}
+                        td.td__precio #{val.precio}
 
-                        td #{val.estado}
+                        td.td__img
+                            img(src=`${val.srcImagen}` alt=`${val.alt}`)
 
-                        td.content__td__form
-                            form(action=`/dashboard/producto/${val.id}/editar` method="get")
-                                button.content__btn.content__btn__edit(type="submit") Editar
+                        td.td__estado #{val.estado}
 
-                            form.formEliminarProducto(action=`/dashboard/producto/${val.id}/eliminar` method="post")
-                                button.content__btn.content__btn__del(type="submit") Eliminar
+                        td.td__btn__action__group
+
+                            div
+
+                                form(action=`/dashboard/producto/${val.id}/editar` method="get")
+                                    button.btn.editar_producto(data-id=`${val.id}`)
+                                        svg(width="25px" height="25px")
+                                            use.icon--primary(xlink:href="/img/sprite.svg#edit" fill="black" width="25px" height="25px")
+
+                                form(action=`/dashboard/producto/${val.id}/eliminar` method="post")
+                                    button.btn.eliminar_producto(data-id=`${val.id}`)
+                                        svg(width="25px" height="25px")
+                                            use.icon--secondary(xlink:href="/img/sprite.svg#trash-can-regular" fill="black" width="25px" height="25px")
+
             else
                 p #{msg}
 

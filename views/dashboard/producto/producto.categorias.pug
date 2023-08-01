@@ -1,0 +1,80 @@
+
+extends ../layout.pug
+block content
+
+    section.d-content.categorias
+
+        h1.d-content__h1 Categorias
+
+        div.container__form__add
+            button#btn__show__form__add
+                svg(width="30px" height="30px")
+                    use.icon--primary(xlink:href="/img/sprite.svg#plus" fill="gray" width="30px" height="30px")
+
+            .form__add__wrapper.hidden
+
+                form#form__add(action="/dashboard/producto/categorias" method="POST")
+
+                    //- .form__group
+
+                    //-     .input__group
+                    //-         label Id 
+                    //-         input(type="number" name="id")
+
+                    //-     .input__group
+                    //-         label Nombre
+                    //-         input(type="text" name="nombre" placeholder="Escriba el nombre")
+
+                    .input__group
+                            label Nombre
+                            input(type="text" name="nombre" placeholder="Escriba el nombre")
+
+                    .input__group
+                        label Descripción 
+                        textarea(type="text" name="descripcion" placeholder="Añada una descripcion")
+
+                    .input__group 
+                        button.btn__submit(type="submit" value="Crear") Crear
+
+
+
+
+
+        table.d-content__table
+
+            thead 
+                tr 
+                    th id
+
+                    th Nombre
+
+                    th Descripcion
+
+                    th Slug
+
+                    th Accion
+
+            if categorias 
+                each val in categorias
+                    tr 
+                        td.td__id 
+                            input.categoria-id.form__id(type="number" value=`${val.id}`) 
+
+                        td.td__nombre
+                            input.categoria-nombre(type="text" value=`${val.nombre}`)
+
+                        td.td__descripcion
+                            textarea.categoria-descripcion(rows="4" value=`${val.descripcion}`) #{val.descripcion}
+
+                        td.td__slug
+                            input.categoria-slug(type="text" value=`${val.slug}`) 
+
+                        td.td__btn__action__group 
+                            div
+                                button.btn.editar_categoria(data-id=`${val.id}`)
+                                    svg(width="25px" height="25px")
+                                        use.icon--primary(xlink:href="/img/sprite.svg#edit" fill="black" width="25px" height="25px")
+
+                                button.btn.eliminar_categoria(data-id=`${val.id}`)
+                                    svg(width="25px" height="25px")
+                                        use.icon--secondary(xlink:href="/img/sprite.svg#trash-can-regular" fill="black" width="25px" height="25px")

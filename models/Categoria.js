@@ -7,16 +7,20 @@ module.exports = {
         db.query("select * from categoria", callback)
     },
 
-    store : function(data, callback){
+    create : function(data, callback){
         db.query("insert into categoria set ?",[data], callback)
+    },
+
+    update : function(datos, callback){
+        db.query("update categoria set ? where id = ?",[datos, datos.id], callback)
+    },
+
+    delete : function(id, callback){
+        db.query("delete from categoria where id = ?",[id], callback)
     },
 
     findOne : function(id, callback){
         db.query("select * from categoria where id = ?",[id], callback)
-    },
-
-    destroy : function(id, callback){
-        db.query("delete from categoria where id = ?",[id], callback)
     },
     
     findByName : function(nombre, callback){

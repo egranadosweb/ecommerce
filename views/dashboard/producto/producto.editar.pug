@@ -1,0 +1,112 @@
+
+extends ../layout.pug
+
+block content
+
+    if imagenes.length === 0
+        -var imagen1 = "No-tiene-imagen"
+        -var imagen2 = "No-tiene-imagen"
+        -var imagen3 = "No-tiene-imagen"
+    else
+        -var imagen1 = imagenes[0].nombre
+        if imagenes[1]
+            -var imagen2 = imagenes[1].nombre
+        else
+            -var imagen2 = "No-tiene-imagen"
+        if imagenes[2]
+            -var imagen3 = imagenes[2].nombre
+        else
+            -var imagen3 = "No-tiene-imagen"
+
+
+
+
+
+    .d-content__modulo
+
+        h1.d-content__h1 Editar Producto
+
+        .d-content__form
+
+            form#form_editar_producto(action=`/dashboard/producto/${producto.id}/editar`, method="post" enctype="multipart/form-data")
+
+                .input__group
+                    label Nombre
+                    input(type="text" name="nombre" placeholder="Escribe el nombre del producto..." value=`${producto.nombre}` data-old-value=`${producto.nombre}`)
+
+                .input__group
+                    label Descripción
+                    textarea(name="descripcion" placeholder="Escribe una descripción para el producto" data-old-value=`${producto.descripcion}`) #{producto.descripcion}
+
+                .form__group
+                    .input__group
+                        label Precio
+                        input(type="number" name="precio" value=`${producto.precio}` data-old-value=`${producto.precio}`)
+                    .input__group
+                        label Precio anterior
+                        input(type="number" name="precioAnterior" value=`${producto.precioAnterior}` data-old-value=`${producto.precioAnterior}`)
+
+
+                .form__select__group
+
+                    .input__group
+                        label Categoria
+                        select(name="categoria_id" data-old-value=`${producto.Categoria_id}`)
+                            each val in categorias
+                                if val.id == producto.Categoria_id
+                                    option(value=`${val.id}` selected) #{val.nombre}
+                                option(value=`${val.id}`) #{val.nombre}
+
+                    .input__group
+                        label Marca
+                        select(name="marca_id" data-old-value=`${producto.Marca_id}`)
+                            each val in marcas
+                                if val.id == producto.Marca_id
+                                    option(value=`${val.id}` selected) #{val.nombre}
+
+                    .input__group
+                        label Estado
+                        select(name="productoestado_id" data-old-value=`${producto.ProductoEstado_id}`)
+                            each val in estados
+                                if val.id == producto.ProductoEstado_id
+                                    option(value=`${val.id}` selected) #{val.estado}
+
+                .input__img__group 
+
+                    p.input__img__caption Imagenes del producto
+
+                    .input__img__grid 
+
+                        .input__img__column 
+                            .input__view.input__drag
+                                img.input__img(src=`/uploads/${imagen1}` alt="" name="imagen1")
+                            .input__file__group
+                                label Escoge una imagen
+                                input.input__file__img(type="file" name="imagen1" data-old-value=`/uploads/${imagen1}`)
+
+
+                        .input__img__column 
+                            .input__view.input__drag
+                                img.input__img(src=`/uploads/${imagen2}` alt="" name="imagen2")
+                            .input__form__group
+                                label Escoge una imagen
+                                input.input__file__img(type="file" name="imagen2" data-old-value=`/uploads/${imagen2}`)
+
+
+                        .input__img__column 
+                            .input__view.input__drag
+                                img.input__img(src=`/uploads/${imagen3}` alt="" name="imagen3")
+
+                            .input__form__group
+                                label Escoge una imagen
+                                input.input__file__img(type="file" name="imagen3" data-old-value=`/uploads/${imagen3}`)
+
+
+                .input__group
+
+                    button.btn.btn__submit(type="submit" disabled) Editar
+
+            if err 
+                p #{err}
+            if msg 
+                p #{msg}

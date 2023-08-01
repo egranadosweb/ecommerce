@@ -10,6 +10,10 @@ const isAuthenticated = function(req,res,next){
     
 }
 
+const isObjectEmpty = (object) => {
+    return object && Object.keys(object).length === 0 && typeof object === "object"
+}
+
 const crearSlug = (string) => {
     var string = string.split(" ").join("-")
     return string
@@ -20,5 +24,6 @@ const crearSlug = (string) => {
 
 module.exports = {
     crearSlug,
-    isAuthenticated
+    isAuthenticated,
+    isObjectEmpty
 }

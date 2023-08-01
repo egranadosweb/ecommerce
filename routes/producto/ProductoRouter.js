@@ -2,8 +2,9 @@
 const express = require("express")
 const router = express.Router()
 const ProductController = require("../../controllers/ProductoController")
-const multer = require("multer")
 const path = require("path")
+//multer configuracion
+const multer = require("multer")
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, "uploads/productos/img")
@@ -13,7 +14,7 @@ const storage = multer.diskStorage({
     }
 })
 const upload = multer({ storage: storage })
-
+// ---------------------------------
 const db = require("../../config/db")
 const { isAuthenticated, crearSlug } = require("../../utils/utils.functions")
 
@@ -26,6 +27,7 @@ router.get("/productos", (req, res, next) => {//mostrar todos los productos en e
             console.log("No hubo resultados")
             return res.render("producto/index", { msg: "No hubo resultados" })
         }
+        
         res.render("producto/index", { rows })
     })
 })
@@ -54,31 +56,30 @@ router.post("/producto", isAuthenticated, (req, res, next) => {
         req.body.fechaCreacion = new Date()
         req.body.slug = crearSlug(req.body.nombre)
 
+        //Comprobamos si subieron almenos una imagen
         if (Object.keys(req.files).length === 0) {
             console.log(false)
             req.noImagenes = 0
             req.sinImagenes = true
         } else {
+            //si subieron imagenes, creamos las siguientes variables en el objeto request para ser usadas mas adelante
             req.sinImagenes = false
             req.noImagenes = Object.keys(req.files).length
         }
-        //console.log(req.files)
-        //console.log(req.body)
-        // console.log(req.body)
-        // console.log(req.noImagenes)
+       
         console.log("middleware multer")
-        console.log(Object.keys(req.body).length !== 0)
         next()
     })
     
-    //return res.send("prueba exitosa")
+   
 
 }, (req, res) => {
     console.log("empieza el handler final")
-    
+
+    //creamos un array de objetos con cada imagen en el archivo req.files
     const arrayImagenes = []
     Object.keys(req.files).forEach((key) => {
-        //const obj = {"asdasd" : req.files[key]}
+        console.log(key)
         arrayImagenes.push({ "nombre" : req.files[key][0].filename, "src" : req.files[key][0].destination})
     })
 
@@ -94,13 +95,14 @@ router.post("/producto", isAuthenticated, (req, res, next) => {
                 db.query("select * from productoestado", (err, estados) => {
                     if (err) throw err
 
+                    //si no se subieron imagenes , creamos el producto sin imagenes
                     if (req.noImagenes == 0) {
                         return res.render("dashboard/producto/producto.crear.pug", { msg: `Se creo el registro con exito : filas afectadas ${result.affectedRows}`, categorias: categorias, marcas: marcas, estados: estados })
-                    }
-
+                    }   
+                    // si se subieron imagenes, creamos el producto y agregamos los datos de las imagenes en la tabla productoImagenes
                     if (req.noImagenes != 0) {
                         for (let i = 0; i < req.noImagenes; i++) {
-                            db.query(`insert into productoImagenes (Producto_id, src, nombre, alt) values (?,?,?,?)`, [result.insertId, arrayImagenes[i].src, arrayImagenes[i].nombre, req.body.nombre ], (err, restulImagen) => {
+                            db.query(`insert into productoImagenes (Producto_id, src, nombre, alt, orden) values (?,?,?,?,?)`, [result.insertId, arrayImagenes[i].src, arrayImagenes[i].nombre, req.body.nombre, i], (err, restulImagen) => {
                                 if (err) throw err
                                 
                                 return res.render("dashboard/producto/producto.crear.pug", { msg: `Se creo el registro con exito : filas afectadas ${result.affectedRows}`, categorias: categorias, marcas: marcas, estados: estados })

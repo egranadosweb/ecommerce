@@ -4,7 +4,7 @@ const con = require("../config/db")
 module.exports = {
 
     all : function(callback){
-        const sql = "select producto.id, producto.nombre, producto.descripcion, producto.slug, producto.precio, marca.nombre as marca, categoria.nombre as categoria, productoestado.estado as estado from producto inner join categoria on categoria.id = producto.Categoria_id inner join marca on marca.id = producto.Marca_id inner join productoestado on productoestado.id = producto.ProductoEstado_id"
+        const sql = "select producto.id, producto.nombre, producto.descripcion, producto.slug, producto.precio, marca.nombre as marca, categoria.nombre as categoria, productoestado.estado as estado, productoImagenes.nombre as nombreImagen, src, alt from producto left join categoria on categoria.id = producto.Categoria_id left join marca on marca.id = producto.Marca_id inner join productoestado on productoestado.id = producto.ProductoEstado_id left join productoImagenes on producto.id = productoImagenes.Producto_id"
         con.query(sql, callback)
     },
 
@@ -15,6 +15,10 @@ module.exports = {
     findOne : function(id, callback){
         const sql = `select * from producto where id = "${id}"`
         con.query(sql, callback)
+    },
+
+    update : function(id, datos, callback){
+        con.query("update producto set ? where id = ?",[datos, id], callback)
     },
 
     destroy : function(id, callback){

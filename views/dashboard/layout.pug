@@ -6,16 +6,19 @@ html(lang="es")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title Menu Aplicacion
         link(rel="stylesheet" href="/css/index.css")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap" rel="stylesheet")
         script(src="/js/index.js")
     body
 
         main.main
 
-            aside.menu
+            aside.menu.menu--desktop
                 .menu__wrapper
                     figure.logo__box 
                         img.logo__icon(src="/img/logo/logo.png" alt="" width="60px" , height="60px")
-                        h2.logo__text Nombre de la Empresa
+                        h2.logo__text E-commerce
 
                     .menu__module
                         h3.module__name Productos
@@ -29,13 +32,11 @@ html(lang="es")
                                     a.module__link(href="/dashboard/producto/crear" data-route="#services") Crear producto
                                 li.module__option
                                     img.module__option-icon(src="https://img.icons8.com/?size=1x&id=x158grZGmi75&format=png" alt="" width="20px")
-                                    a.module__link(href="" data-route="prueba") Opcion
+                                    a.module__link(href="/dashboard/producto/categorias" data-route="prueba") Categorias
                                 li.module__option
                                     img.module__option-icon(src="https://img.icons8.com/?size=1x&id=x158grZGmi75&format=png" alt="" width="20px")
-                                    a.module__link(href="" data-route="#noexiste") No existe
-                                li.module__option
-                                    img.module__option-icon(src="https://img.icons8.com/?size=1x&id=x158grZGmi75&format=png" alt="" width="20px")
-                                    a.module__link(href="") Opcion
+                                    a.module__link(href="/dashboard/producto/marcas" data-route="#noexiste") Marcas
+
 
                     .menu__module
                         h3.module__name Usuario
@@ -103,12 +104,9 @@ html(lang="es")
 
 
 
-
                     .d-content#app
 
-                        .d-content__wrapper
-
-                            block content
+                        block content
 
 
 

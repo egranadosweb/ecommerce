@@ -1,0 +1,20 @@
+
+.container__form__add{
+    padding: 2rem 0;
+}
+
+.form__add__wrapper{
+    outline: 4px solid gray;
+    padding: 1rem;
+    border-radius: .5rem;
+
+    input{
+        outline: 4px solid gray;
+    }
+
+    label{
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+}
+

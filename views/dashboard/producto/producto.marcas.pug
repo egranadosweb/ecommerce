@@ -1,0 +1,64 @@
+
+extends ../layout.pug
+block content
+
+    section.d-content.marcas
+
+        h1.d-content__h1 Marcas
+
+        div.container__form__add
+
+            button#btn__show__form__add
+                svg(width="30px" height="30px")
+                    use.icon--primary(xlink:href="/img/sprite.svg#plus" fill="gray" width="30px" height="30px")
+
+            .form__add__wrapper.hidden
+
+                form#form__add(action="/dashboard/producto/marcas" method="POST")
+
+
+                    .input__group
+                            label Nombre
+                            input(type="text" name="nombre" placeholder="Escriba el nombre")
+
+    
+                    .input__group 
+                        button.btn__submit(type="submit" value="Crear") Crear
+
+
+
+
+
+        table.d-content__table
+
+            thead 
+                tr 
+                    th id
+
+                    th Nombre
+
+                    th Slug
+
+                    th Accion
+
+            if marcas 
+                each val in marcas
+                    tr 
+                        td.td__id 
+                            input.marca-id.form__id(type="number" value=`${val.id}`) 
+
+                        td.td__nombre
+                            input.marca-nombre(type="text" value=`${val.nombre}`)
+
+                        td.td__slug
+                            input.marca-slug(type="text" value=`${val.slug}`) 
+
+                        td.td__btn__action__group 
+                            div
+                                button.btn.editar_marca(data-id=`${val.id}`)
+                                    svg(width="25px" height="25px")
+                                        use.icon--primary(xlink:href="/img/sprite.svg#edit" fill="black" width="25px" height="25px")
+
+                                button.btn.eliminar_marca(data-id=`${val.id}`)
+                                    svg(width="25px" height="25px")
+                                        use.icon--secondary(xlink:href="/img/sprite.svg#trash-can-regular" fill="black" width="25px" height="25px")

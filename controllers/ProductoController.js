@@ -1,6 +1,7 @@
 
 const Product = require("../models/Producto")
 const { crearSlug } = require("../utils/utils.functions")
+const db = require("../config/db")
 
 
 module.exports = {
@@ -11,7 +12,7 @@ module.exports = {
             if (rows.length != 0) {
                 return callback(null, rows)
             }
-            return callback({ cant: 0, msg: "No hubieron resultado" }, null)
+            return callback({ cant: 0, msg: "productoController : No hubo resultado" }, null)
         })
 
     },
@@ -30,14 +31,32 @@ module.exports = {
     },
 
 
-    show(req, res) {
+    show(id, callback) {
 
-        Product.findOne(req.params.id, (err, row) => {
-            if (err) throw err
-            console.log(row)
-            res.render("producto/index", { rows: row })
+        Product.findOne(id, (err, row) => {
+            if(err){
+                return callback(err,null)
+            }
+            const productoImagenes = []
+            db.query(`select * from productoImagenes where producto_id = ${id}`, (err, rows) => {
+                if(err) throw err
+                //console.log(rows)
+                row[1] = rows
+                return callback(null, row)
+            })
+            
         })
 
+    },
+
+    update(id, datos, callback){
+        Product.update(id, datos, (err, result) => {
+            if(err){
+                callback(err, null)
+            }else{
+                callback(null, result)
+            }
+        })
     },
 
 

@@ -11,9 +11,8 @@ const productoRouter = require("./routes/producto/ProductoRouter")
 const authRouter = require("./routes/auth/auth")
 const dashboardRouter = require("./routes/dashboard/DashboardRouter")
 const errorRouter = require("./routes/ErrorRouter")
-const categoriaRouter = require("./routes/producto/CategoriaRouter")
-// var methodOverride = require("method-override")
 
+// var methodOverride = require("method-override")
 const app = express()
 const port = process.env.PORT || 2900
 const mysqlOptions = {
@@ -39,6 +38,7 @@ sessionStore.onReady().then(() => {
     console.log(err)
 })
 
+app.use("/uploads", express.static( path.join(__dirname, "/uploads/productos/img")))
 app.use("/css", express.static( path.join(__dirname, "/public/dashboard/css")))
 app.use("/img", express.static( path.join(__dirname, "/public/dashboard/img")))
 app.use("/img/productos", express.static( path.join(__dirname, "/public/img/productos")))
@@ -71,7 +71,6 @@ app.get("/prueba", (req, res ,next) => {
 app.use("/", authRouter)
 app.use("/", productoRouter)
 app.use("/", dashboardRouter)
-app.use("/", categoriaRouter)
 app.use("/", errorRouter)
 
 
