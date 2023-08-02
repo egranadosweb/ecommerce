@@ -1,6 +1,7 @@
 const CategoriaController = require("../CategoriaController")
 const MarcaController = require("../MarcaController")
 const EstadoController = require("../EstadoController")
+const UsuarioTipo = require("../../models/UsuarioTipo")
 
 module.exports = {
 
@@ -17,6 +18,13 @@ module.exports = {
                     return cb(null, categorias, marcas, estados)
                 })
             })
+        })
+    },
+
+    tipoUsuarioSelect(cb){
+        UsuarioTipo.all((err, rows) => {
+            if(err) return cb(err)
+            return cb(null, rows)
         })
     },
 

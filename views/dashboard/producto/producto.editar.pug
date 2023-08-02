@@ -1,26 +1,6 @@
 
 extends ../layout.pug
-
 block content
-
-    if imagenes.length === 0
-        -var imagen1 = "No-tiene-imagen"
-        -var imagen2 = "No-tiene-imagen"
-        -var imagen3 = "No-tiene-imagen"
-    else
-        -var imagen1 = imagenes[0].nombre
-        if imagenes[1]
-            -var imagen2 = imagenes[1].nombre
-        else
-            -var imagen2 = "No-tiene-imagen"
-        if imagenes[2]
-            -var imagen3 = imagenes[2].nombre
-        else
-            -var imagen3 = "No-tiene-imagen"
-
-
-
-
 
     .d-content__modulo
 
@@ -79,27 +59,27 @@ block content
 
                         .input__img__column 
                             .input__view.input__drag
-                                img.input__img(src=`/uploads/${imagen1}` alt="" name="imagen1")
+                                img.input__img(src=`/uploads/${imagenes.imagen1.nombre}` alt="" name="imagen1")
                             .input__file__group
                                 label Escoge una imagen
-                                input.input__file__img(type="file" name="imagen1" data-old-value=`/uploads/${imagen1}`)
+                                input.input__file__img(type="file" name="imagen1" data-old-value=`/uploads/${imagenes.imagen1.nombre}`)
 
 
                         .input__img__column 
                             .input__view.input__drag
-                                img.input__img(src=`/uploads/${imagen2}` alt="" name="imagen2")
+                                img.input__img(src=`/uploads/${imagenes.imagen2.nombre}` alt="" name="imagen2")
                             .input__form__group
                                 label Escoge una imagen
-                                input.input__file__img(type="file" name="imagen2" data-old-value=`/uploads/${imagen2}`)
+                                input.input__file__img(type="file" name="imagen2" data-old-value=`/uploads/${imagenes.imagen2.nombre}`)
 
 
                         .input__img__column 
                             .input__view.input__drag
-                                img.input__img(src=`/uploads/${imagen3}` alt="" name="imagen3")
+                                img.input__img(src=`/uploads/${imagenes.imagen3.nombre}` alt="" name="imagen3")
 
                             .input__form__group
                                 label Escoge una imagen
-                                input.input__file__img(type="file" name="imagen3" data-old-value=`/uploads/${imagen3}`)
+                                input.input__file__img(type="file" name="imagen3" data-old-value=`/uploads/${imagenes.imagen3.nombre}`)
 
 
                 .input__group

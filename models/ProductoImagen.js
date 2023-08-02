@@ -17,7 +17,19 @@ module.exports = {
         })
     },
 
-    
+    update(productoId, datos, orden, cb){
+        db.query("UPDATE productoImagenes SET ? WHERE Producto_id = ? AND orden = ?",[datos, productoId, orden] , (err, result) => {
+            if(err) return cb(err, null)
+            return cb(null, result)
+        })
+    },
+
+    create(datos, cb){
+        db.query("INSERT INTO productoImagenes SET ?", [datos], (err, result) => {
+            if(err) return cb(err, null)
+            return cb(null, result)
+        })
+    },
 
 
 

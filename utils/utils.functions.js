@@ -20,8 +20,6 @@ const crearSlug = (string) => {
 }
 
 
-
-
 module.exports = {
     crearSlug,
     isAuthenticated,

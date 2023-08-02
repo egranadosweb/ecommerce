@@ -1,0 +1,42 @@
+
+extends ../layout.pug
+
+block content
+    .d-content__modulo
+
+        h1.d-content__h1 Crear nuevo usuario
+        
+        .d-content__form
+
+            form#form_crear_producto(action="/dashboard/usuario/crear", method="post")
+
+                .input__group
+                    label Nombre
+                    input(type="text" name="nombre" placeholder="Escribe el nombre del producto..." )
+
+                .form__group
+                    .input__group
+                        label Username
+                        input(name="username" placeholder="Escribe el username del usuario")
+
+                    .input__group
+                        label Contraseña
+                        input(type="password" name="password")
+
+                .form__select__group
+
+                    .input__group
+                        label Tipo de usuario
+                        select(name="UsuarioTipo_id")
+                            each val in usuariotipo
+                                option(value=`${val.id}`) #{val.nombre}
+                            
+                .input__group
+                    
+                    button.btn.btn__submit(type="submit") Guardar
+
+            if err 
+                p #{err}
+            if msg 
+                p #{msg}
+        

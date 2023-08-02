@@ -10,7 +10,7 @@ const storage = multer.diskStorage({
         cb(null, "uploads/productos/img")
     },
     filename: (req, file, cb) => {
-        cb(null, Date.now() + path.extname(file.originalname))
+        cb(null, Date.now() + Math.floor(Math.random()*(999-100+1)+100) + path.extname(file.originalname))
     }
 })
 const upload = multer({ storage: storage })

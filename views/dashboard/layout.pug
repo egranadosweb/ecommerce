@@ -37,35 +37,30 @@ html(lang="es")
                                     img.module__option-icon(src="https://img.icons8.com/?size=1x&id=x158grZGmi75&format=png" alt="" width="20px")
                                     a.module__link(href="/dashboard/producto/marcas" data-route="#noexiste") Marcas
 
-
                     .menu__module
-                        h3.module__name Usuario
+                        h3.module__name Ventas
                         nav.module__options
                             ul.module__options-list
                                 li.module__option
                                     img.module__option-icon(src="https://img.icons8.com/?size=1x&id=x158grZGmi75&format=png" alt="" width="20px")
-                                    a.module__link(href="") Opcion
+                                    a.module__link(href="/dashboard/ventas") Listar
                                 li.module__option
                                     img.module__option-icon(src="https://img.icons8.com/?size=1x&id=x158grZGmi75&format=png" alt="" width="20px")
-                                    a.module__link(href="") Opcion
+                                    a.module__link(href="/dashboard/ventas/buscar") Buscar
+
+
+                    .menu__module
+                        h3.module__name Usuarios
+                        nav.module__options
+                            ul.module__options-list
                                 li.module__option
                                     img.module__option-icon(src="https://img.icons8.com/?size=1x&id=x158grZGmi75&format=png" alt="" width="20px")
-                                    a.module__link(href="") Opcion
+                                    a.module__link(href="/dashboard/usuarios") Listar
                                 li.module__option
                                     img.module__option-icon(src="https://img.icons8.com/?size=1x&id=x158grZGmi75&format=png" alt="" width="20px")
-                                    a.module__link(href="") Opcion
-                                li.module__option
-                                    img.module__option-icon(src="https://img.icons8.com/?size=1x&id=x158grZGmi75&format=png" alt="" width="20px")
-                                    a.module__link(href="") Opcion
-                                li.module__option
-                                    img.module__option-icon(src="https://img.icons8.com/?size=1x&id=x158grZGmi75&format=png" alt="" width="20px")
-                                    a.module__link(href="") Opcion
-                                li.module__option
-                                    img.module__option-icon(src="https://img.icons8.com/?size=1x&id=x158grZGmi75&format=png" alt="" width="20px")
-                                    a.module__link(href="") Opcion
-                                li.module__option
-                                    img.module__option-icon(src="https://img.icons8.com/?size=1x&id=x158grZGmi75&format=png" alt="" width="20px")
-                                    a.module__link(href="") Opcion
+                                    a.module__link(href="/dashboard/usuario/crear") Crear
+                    
+                    
 
                     .menu__btn-box
                         a.menu__btn__collapse(href="")  Collapse
@@ -93,7 +88,7 @@ html(lang="es")
                                 .content__avatar__logo
                                     svg(aria-hidden="true" width="50px" height="50px" viewBox="0 0 1024 1024") 
                                         use(xlink:href="/img/sprite.svg#circle-user-regular" fill="gray") 
-                                    span.content__avatar-notification 2
+                                    //- span.content__avatar-notification 2
 
                                     .content__avatar__submenu
                                         form.content__avatar__form(action="/logout" method="post")

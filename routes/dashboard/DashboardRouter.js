@@ -16,12 +16,9 @@ router.get("/dashboard", isAuthenticated , (req,res,next) => {
 //modulo producto
 router.get("/dashboard/producto/", isAuthenticated, DashboardController.listarProductos)
 router.get("/dashboard/producto/crear", isAuthenticated, DashboardController.crearFormProducto)
-router.get("/dashboard/producto/:id/editar", isAuthenticated, DashboardController.editarFormProducto)
+router.get("/dashboard/producto/editar/:id", isAuthenticated, DashboardController.editarFormProducto)
 router.post("/dashboard/producto/:id/editar", isAuthenticated, DashboardController.editarProducto)
-router.post("/dashboard/producto/:id/eliminar", isAuthenticated , (req, res) => {
-    //res.send(req.params.id)
-    DashboardController.eliminar(req.params.id, res)
-})
+router.post("/dashboard/producto/:id/eliminar", isAuthenticated , DashboardController.eliminarProducto)
 
 
 //modulo categorias
@@ -37,11 +34,13 @@ router.post("/dashboard/producto/marcas", isAuthenticated, DashboardController.c
 router.post("/dashboard/producto/marcas/:id/editar", isAuthenticated, DashboardController.editarMarca)
 router.post("/dashboard/producto/marcas/:id/eliminar", isAuthenticated, DashboardController.eliminarMarca)
 
+// Modulo Usuarios --------------
+router.get("/dashboard/usuarios", DashboardController.listarUsuarios)
+router.post("/dashboard/usuarios/:id/eliminar", DashboardController.eliminarUsuario)
+router.get("/dashboard/usuario/crear", DashboardController.crearFormUsuario)
+router.post("/dashboard/usuario/crear", DashboardController.crearUsuario)
+
 //modulo cliente
-
-
-//modulo usuario
-
 
 //modulo ordenes
 
