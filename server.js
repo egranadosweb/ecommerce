@@ -42,6 +42,7 @@ sessionStore.onReady().then(() => {
 })
 
 // creamos las rutas estaticas
+app.use("/public", express.static( path.join(__dirname, "/public")))
 app.use("/uploads", express.static( path.join(__dirname, "/uploads/productos/img")))
 app.use("/css", express.static( path.join(__dirname, "/public/dashboard/css")))
 app.use("/img", express.static( path.join(__dirname, "/public/dashboard/img")))
@@ -59,8 +60,8 @@ app.use(passport.authenticate("session"))//Se debe registrar antes de registrar 
 
 // rutas de prueba
 app.get("/", (req, res) => {
-    console.log("Prueba ruta inicial")
-    res.send("Ruta principal")
+    console.log("Ruta principal")
+    res.sendFile(path.join(__dirname, "public/index.html"))
 })
 app.get("/prueba", (req, res ,next) => {
     if(req.query.nombre){

@@ -1,0 +1,64 @@
+
+.show{
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.hidden{
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+.stop-scrolling{
+    height: 100%;
+    overflow: hidden;
+}
+
+.title{
+    color: $brandColor;
+    text-decoration: underline;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.animation--intersecting{
+    opacity: 0;
+    transform:translateX("300px")
+}
+
+.animation--intersecting--in{
+    opacity: 1;
+    transform:translateX("0%")
+}
+
+
+
+.btn__show__carrito{
+    cursor: pointer;
+    position: relative;
+}
+
+.carrito__notificacion{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    font-size: .8rem;
+    top: 5px;
+    right: 5px;
+    background-color: white;
+    color: $brandColor;
+    border-radius: 50%;
+    display: table-cell;
+    text-align: center;
+    align-self: center;
+}
+
+.carrito__item__del{
+    position: absolute;
+    cursor: pointer;
+    top: -5px;
+    right: 0;
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: $brandColor;
+}

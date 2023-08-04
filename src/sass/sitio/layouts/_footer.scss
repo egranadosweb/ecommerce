@@ -1,0 +1,131 @@
+
+.footer{
+    position: relative;
+    overflow: hidden;
+    font-size: .9rem;
+}
+.footer__shape{
+    position: absolute;
+    transform: translateX(50%) translateY(50%);
+    z-index: -1;
+    opacity: .2;
+    right: 0;
+    //top: 35%;
+    top: 0;
+    height: 50%;
+    @include responsive("tablet"){
+        height: 100%;
+        transform: translateX(50%);
+    }
+}
+.footer__wrapper{
+    padding: 4rem 1rem;
+    @include responsive("desktop"){
+        max-width: 1100px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 30% auto auto;
+        grid-column-gap: 2rem;
+    }
+}
+.footer__block{
+    padding: 1rem 0;
+}
+.footer__block1{}
+.footer__box__logo {}
+.footer__logo{
+    margin-bottom: 1rem;
+}
+.footer__copy{}
+.footer__block2 {}
+.footer__caption{
+    color: $primaryText;
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+.footer__information__list {
+    margin-bottom: 1rem;
+}
+.footer__information__li{
+    padding: .5rem 0;
+    padding-left: .5rem;
+    &:hover{
+        color: $primaryText;
+        color: $primaryText;
+        background-color: rgb(235, 235, 235);
+        border-radius: 8px;
+    }
+}
+.footer__information__link{
+    span{
+        vertical-align: super;
+    }
+}
+.footer__information__icon{
+    margin-right: .5rem;
+}
+.footer__social{
+
+}
+.footer__social__link{
+    transition: all .5s;
+    position: relative;
+    z-index: 2;
+    :hover{
+        //padding: .3rem;
+        position: relative;
+        z-index: 1;
+        background-color: #f5e4e5;
+        border-radius: 20%;
+        border-style: hidden;
+    }
+}
+.footer__network{
+    padding: 1rem;
+}
+.footer__block3 {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+}
+.footer__subblock{}
+.footer__subblock__caption{
+    color: $primaryText;
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+.footer__subblock__list {
+}
+.footer__subblock__li{
+    padding: .5rem 0;
+    padding-left: .5rem;
+    &::before{
+        content: ">";
+        display: inline;
+        font-size: .7rem;
+        vertical-align: middle;
+        margin-right: .5rem;
+        color: $secondaryText;
+    }
+    :hover{
+        color: $primaryText;
+        background-color: rgb(235, 235, 235);
+        border-radius: 8px;
+    }
+}
+
+.footer__copyright{
+    background-color: gray;
+    color: white;
+}
+.footer__copyright__wrapper{
+    padding: .5rem 1rem;
+    @include responsive("desktop"){
+        max-width: 1100px;
+        margin: auto;
+    }
+}
+.footer__copyright__text{
+    font-size: .8rem;
+}

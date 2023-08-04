@@ -1,0 +1,87 @@
+
+.metodologia{}
+.metodologia__wrapper{
+    padding: 4rem 1rem;
+    @include responsive("desktop"){
+        max-width: 1100px;
+        margin:auto;
+    }
+}
+.metodologia__caption{
+    display: block;
+    color: #202124;
+    font-size: 1.5rem;
+    line-height: 34px;
+    text-align: center;
+    padding: 0 0 3rem;
+}
+.metodologia__caption__span{
+    display: block;
+    color: $brandColor;
+    font-size: 4rem;
+    line-height: 74px;
+    text-align: center;
+}
+.metodologia__box{
+    padding: 4rem 0;
+    @include responsive("tablet"){
+        display: grid;
+        grid-template-columns:1fr 1fr;
+    }
+    @include responsive("desktop"){
+    }
+}
+.metodologia__box--right{
+    text-align: right;
+    @include responsive("tablet"){
+        div{
+            order: 1;
+        }
+    }
+}
+.metodologia__box__img{
+    @include responsive("tablet"){
+        text-align: center;
+    }
+}
+.metodologia__img{
+    @include responsive("tablet"){
+        &__confianza{
+            height: 400px;
+            width: auto;
+        }
+        &__mejor-empleado{
+            width: 380px;
+            height: auto;
+        }
+        &__hombre-cohete{
+            width: 380px;
+            height: auto;
+        }
+    }
+}
+.metodologia__box__text{
+    margin-bottom: 3rem;
+    @include responsive("tablet"){
+        padding: 2rem 2rem;
+        margin-bottom: 0;
+        align-self: center;
+    }
+    @include responsive("desktop"){
+        padding: 2rem 3rem;
+    }
+    @include responsive("large"){
+        padding: 2rem 4rem;
+    }
+}
+.metodologia__text__span{
+    display: block;
+    color: #202124;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+.metodologia__text__p{
+    @include responsive("tablet"){
+        //padding-right: 2rem;
+    }
+}

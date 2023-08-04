@@ -1,0 +1,57 @@
+
+.btn{
+    width: 128px;
+    height: 38px;
+    //margin-right: 1rem;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    line-height: normal;
+    transition: all .5s;
+}
+
+.btn--primary{
+    background-color: $brandColor;
+    color: white;
+
+    &:hover{
+        //background-color: darken($brandColor, 30%);
+        background-color: lighten($brandColor, 10%);
+    }
+}
+.btn--primary--inverted{
+    background-color: white;
+    color: $secondaryText;
+    border: 1px solid $brandColor;
+    &:hover{
+        background-color: $brandColor;
+        color:white;
+    }
+}
+.btn--secondary{
+    background-color:#f5f394 ;
+    color: $secondaryText;
+
+    &:hover{
+        background-color: lighten(#f5f394, 10%);
+    }
+}
+
+.btn--secondary--inverted{
+    background-color: white;
+    border: 1px solid #f5f394;
+}
+
+.btn--green--inverted{
+    background-color: white;
+    color: $secondaryText;
+    border: 1px solid #21B73C;
+    &:hover{
+        background-color: #21B73C;
+        border: none;
+        color: white;
+    }
+}
+

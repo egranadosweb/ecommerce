@@ -1,0 +1,18 @@
+
+@mixin responsive($point){
+    @if map-has-key($breakpoints,$point){
+        @media (min-width: map-get($breakpoints,$point)){
+            @content;
+        }
+    }
+    @else{
+        @warn "No exist that breakpoint `#{$point}`";
+    }
+}
+
+@mixin abs-position($top,$right,$bottom,$left){
+    top : $top;
+    right : $right;
+    bottom : $bottom;
+    left : $left;
+}

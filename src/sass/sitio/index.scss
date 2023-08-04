@@ -1,0 +1,26 @@
+
+@import "./base/normalize";
+@import "./abstracs/variables";
+@import "./base/config";
+@import "./abstracs/extends";
+@import "./abstracs/mixins";
+
+@import "./components/buttons";
+@import "./components/carousel";
+
+@import "./layouts/header";
+@import "./layouts/header-ecommerce";
+@import "./layouts/servicios";
+@import "./layouts/soporte-toda-colombia";
+@import "./layouts/productos";
+@import "./layouts/metodologia";
+@import "./layouts/contactarnos";
+@import "./layouts/servicios-empresas";
+@import "./layouts/pago";
+@import "./layouts/footer";
+
+@import "./pages/article";
+@import "./pages/product";
+@import "./pages/carrito";
+@import "./pages/carrito-checkout";
+@import "./pages/products";

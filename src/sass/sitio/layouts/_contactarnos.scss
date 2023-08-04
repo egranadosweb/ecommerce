@@ -1,0 +1,65 @@
+
+.contactarnos{
+    background-color: $brandColor;
+    position: relative;
+    overflow: hidden;
+}
+.contactarnos__shape{
+    position: absolute;
+    height: 100%;
+    z-index: 1;
+    left: 0;
+    transform : translateX(-50%);
+    top: 0;
+    opacity: .18;
+}
+.contactarnos__wrapper{
+    position: relative;
+    z-index: 2;
+    padding: 4rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @include responsive("desktop"){
+        max-width: 1100px;
+        margin: auto;
+    }
+}
+.contactarnos__box__img{
+    //margin-bottom: 2rem;
+    text-align: center;
+    display: table-cell;
+    align-self: center;
+    text-align: center;
+    padding: 1rem;
+}
+.contactarnos__img{
+    width: 90%;
+    @include responsive("pretablet"){
+        width: 70%;
+    }
+    @include responsive("tablet"){
+        width: 50%;
+    }
+}
+.contactarnos__box__text{
+    align-self: center;
+    @include responsive("tablet"){
+        padding-right: 2rem;
+    }
+    
+}
+.contactarnos__caption{
+    color: $primaryText;
+    margin-bottom: 1rem;
+}
+.contactarnos__cta{
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+.contactarnos__btn{
+    display: block;
+    margin: 0;
+    background-color: $contrastColor;
+    color: $primaryText;
+}

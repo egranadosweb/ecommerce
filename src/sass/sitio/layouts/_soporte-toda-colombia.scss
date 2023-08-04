@@ -1,0 +1,54 @@
+.soporte{
+    background-color: $contrastColor;
+    position: relative;
+    overflow: hidden;
+}
+.soporte__shape{
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    transform: translateX(50%) ;
+    opacity: .1;
+}
+.soporte__wrapper{
+    padding: 4rem 1rem;
+    display: flex;
+    @include responsive("desktop"){
+        max-width: 1100px;
+        margin: auto;
+    }
+}
+.soporte__box__left{
+    width: 50%;
+    //display: table-cell;
+    //align-self: center;
+    text-align: center;
+    padding: 1rem;
+    @include responsive("pretablet"){
+        //padding: 2rem;
+    }
+    @include responsive("tablet"){
+        //padding: 3rem;
+    }
+}
+.soporte__img{
+    width: 100%;
+    @include responsive("pretablet"){
+        width: 70%;
+    }
+    @include responsive("tablet"){
+        width: 50%;
+    }
+}
+.soporte__box__right{
+    width: 50%;
+    align-self: center;
+}
+.soporte__texto{
+    margin-bottom: 2rem;
+    @include responsive("tablet"){
+        padding-right:2rem;
+    }
+}
+.soporte__btn{}

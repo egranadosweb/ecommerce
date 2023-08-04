@@ -1,0 +1,100 @@
+
+
+.article__banner{
+    background-image: url("../img/article/mantenimiento-preventivo-computador.jpg");
+    background-position: center;
+}
+.article__banner__wrapper{
+    padding: 3rem 1rem;
+}
+.article__banner__content{
+    padding: 2rem 1.5rem;
+    margin-top: 5rem;
+    border-top-right-radius:10rem;
+    background-color: rgba($color: #fff, $alpha: 1);
+    transform: translateY(180px);
+}
+.article__breadcrumbs {
+    
+}
+.article__breadcrumb{
+    display: inline-block;
+    font-size: .8rem;
+    margin-right: .5rem;
+    ::after{
+        content: "/";
+        padding:0 .5rem;
+    }
+}
+.article__bc-link{
+    word-break: break-all;
+}
+.article__h1{
+    color: $brandColor;
+}
+
+
+
+.article__content{}
+.article__content__wrapper{
+    padding: 8rem 1rem 3rem;
+    @include responsive("desktop"){
+        max-width: 1100px;
+        margin: auto;
+    }
+}
+.article__content__text{}
+.article__content__h2{
+    color: $primaryText;
+    padding: 1rem 0 0;
+    line-height:34px;
+    margin-bottom: 2rem;
+}
+.article__content__p{
+    margin-bottom: 2rem;
+}
+
+.article__content__figure{
+    margin-bottom: 1rem;
+}
+.article__content__img{
+    width: 100%;
+}
+.article__content__figcaption{
+    font-size: .8rem;
+    line-height: 20px;
+    font-style: italic;
+}
+
+
+.article__cta{
+    position: relative;
+    border-top-right-radius:10rem;
+    background-color: $brandColor;
+}
+.article__cta__shape{
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(-50%);
+    opacity: .2;
+}
+.article__cta__wrapper{
+    position: relative;
+    z-index: 10;
+    padding: 4rem 1rem;
+    text-align: center;
+}
+.article__cta__copy{
+    font-size: 1.5rem;
+    padding: 1rem;
+    font-weight: normal;
+    line-height: 34px;
+    margin-bottom: 2rem;
+    color: white;
+}
+.article__cta__btn{
+   
+}

@@ -1,0 +1,198 @@
+extends ./layout/layout__producto.pug
+
+block content
+
+    section.product
+        .product__wrapper
+            .product__head 
+                .product__breadcrumbs
+                    ul.product__breadcrumbs__list
+                        li.product__breadcrumb__li
+                            a.product__breadcrumb__a(href="") Inicio
+                        li.product__breadcrumb__li
+                            a.product__breadcrumb__a(href="") Productos
+                        li.product__breadcrumb__li
+                        | Disco Solido Kingston de 240 GB
+
+                .product__images
+                    .product__images__wrapper
+                        figure.product__image__figure
+                            img.product__img(src="" alt="")
+
+                    .product__images__thumbnails
+                        .product__images__thumbnails__wrapper
+                            figure.product__images__thumbnails__figure
+                                img.product__images__thumbnail.product__img__carrito(src="/public/site/img/productos/1.png")
+                            figure.product__images__thumbnails__figure
+                                img.product__images__thumbnail(src="/public/site/img/productos/2.png")
+                            figure.product__images__thumbnails__figure
+                                img.product__images__thumbnail(src="/public/site/img/productos/1.png")
+
+            .product__body
+                .product__body__sticky
+
+                    .product__name__box
+                        h1.product__name#nombre__producto Disco Solido Kingston de 240 GB 
+                        |por 
+                        span.product__brand Kingstong
+                    .product__price__box 
+                        p.product__price 150000
+                        p.product__price__before 170000
+                    .product__shipping
+                        img.product__shipping-logo(src="/public/site/img/icons/shipping.png" alt="" width="30px")
+                        span Envío a toda Colombia
+
+                    .product__specs
+                        ul.product__specs__ul
+                            li.product__specs__li#marca__producto
+                                span Marca: 
+                                | Kingstong
+                            li.product__specs__li#referencia__producto
+                                span Referencia: 
+                                | SSD240GB
+                            li.product__specs__li
+                                span Estado: 
+                                | Nuevo
+                            li.product__specs__li
+                                span Garantía: 
+                                | 6 meses
+
+                    .product__cta
+                        .product__cta__wrapper
+                            .product__cta__amount
+                                .product__cta__amount__title
+                                    span Cantidad: 
+                                .product__cta__amount__control 
+                                    .product__cta__amount__control__wrapper
+                                        button.product__cta__amount__control__btn.product__cta__amount__control__btn--less -
+                                        p.product__cta__amount__display#cantidad__producto 1
+                                        button.product__cta__amount__control__btn.product__cta__amount__control__btn--more +
+                            a.product__cta__btn.btn.btn--primary.btn__add__carrito(href="#") 
+                                img.product__cta__btn__cart-logo(src="/public/site/img/icons/carrito.png" alt="" width="30px")
+                                | Agregar al carrito
+
+
+            .product__description
+                .product__description__wrapper 
+                    p.product__description__text
+                        span Descripción: 
+                        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quaerat doloremque id quas autem veritatis molestiae voluptatum possimus officiis amet quis error et laboriosam voluptatem veniam, deserunt reiciendis sapiente recusandae.
+
+    section.relacionados
+
+        .relacionados__wrapper
+
+            h2.relacionados__h2 Acompaña tu compra con:
+
+            .carousel__main__wrapper
+                .carousel__wrapper.carousel__productos
+                    .carousel__card
+                        .carousel__card__wrapper
+                            figure.carousel__card__box__img
+                                img.carousel__card__img(src="/public/site/img/productos/1.png" alt="" height="100px")
+                            h3.carousel__card__title Disco Solido Kingston 240GB
+                            .carousel__card__box__price
+                                p.carousel__card__price__before
+                                    span $170.000
+                                p.carousel__card__price 
+                                    span $150.000
+                            .carousel__card__box__shipping
+                                p.carousel__card__shipping
+                                    img.carousel__card__shipping-logo(src="/public/site/img/icons/shipping.png" alt="" width="30px")
+                                    span Envío a toda Colombia
+                            //- p.carousel__card__text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            a.carousel__card__btn.btn.btn--primary.btn__carrito(href="product.html") Más información
+
+                    .carousel__card
+                        .carousel__card__wrapper
+                            figure.carousel__card__box__img
+                                img.carousel__card__img(src="/public/site/img/productos/1.png" alt="" height="100px")
+                            h3.carousel__card__title Disco Solido Kingston 240GB
+                            .carousel__card__box__price
+                                p.carousel__card__price__before
+                                    span $170.000
+                                p.carousel__card__price 
+                                    span $150.000
+                            .carousel__card__box__shipping
+                                p.carousel__card__shipping
+                                    img.carousel__card__shipping-logo(src="/public/site/img/icons/shipping.png" alt="" width="30px")
+                                    span Envío a toda Colombia
+                            //- p.carousel__card__text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            a.carousel__card__btn.btn.btn--primary(href="product.html") Más información
+
+                    .carousel__card
+                        .carousel__card__wrapper
+                            figure.carousel__card__box__img
+                                img.carousel__card__img(src="/public/site/img/productos/1.png" alt="" height="100px")
+                            h3.carousel__card__title Disco Solido Kingston 240GB
+                            .carousel__card__box__price
+                                p.carousel__card__price__before
+                                    span $170.000
+                                p.carousel__card__price 
+                                    span $150.000
+                            .carousel__card__box__shipping
+                                p.carousel__card__shipping
+                                    img.carousel__card__shipping-logo(src="/public/site/img/icons/shipping.png" alt="" width="30px")
+                                    span Envío a toda Colombia
+                            //- p.carousel__card__text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            a.carousel__card__btn.btn.btn--primary(href="product.html") Más información
+
+                    .carousel__card
+                        .carousel__card__wrapper
+                            figure.carousel__card__box__img
+                                img.carousel__card__img(src="/public/site/img/productos/1.png" alt="" height="100px")
+                            h3.carousel__card__title Disco Solido Kingston 240GB
+                            .carousel__card__box__price
+                                p.carousel__card__price__before
+                                    span $170.000
+                                p.carousel__card__price 
+                                    span $150.000
+                            .carousel__card__box__shipping
+                                p.carousel__card__shipping
+                                    img.carousel__card__shipping-logo(src="/public/site/img/icons/shipping.png" alt="" width="30px")
+                                    span Envío a toda Colombia
+                            //- p.carousel__card__text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            a.carousel__card__btn.btn.btn--primary(href="product.html") Más información
+
+                    .carousel__card__breadcrumbs
+                        .carousel__card__bradcrumb
+                        .carousel__card__bradcrumb
+                        .carousel__card__bradcrumb
+                        .carousel__card__bradcrumb
+                        .carousel__card__bradcrumb
+                        .carousel__card__bradcrumb
+
+                    figure.carousel__card__arrow.carousel__card__left-arrow
+                        img.carousel__card__arrow-logo(src="/public/site/img/servicios/arrow-left.png" alt="")
+                    figure.carousel__card__arrow.carousel__card__right-arrow.carousel__card__arrow--right
+                        img.carousel__card__arrow-logo(src="/public/site/img/servicios/arrow-right.png" alt="")
+
+    section.pasarela-info 
+        .pasarela-info__wrapper 
+            .pasarela-info__row
+                h3.pasarela-info__h3 Medios de pago
+                ul.pasarela-info__icons 
+                    li.pasarela-info__li 
+                        img.pasarela-info__icon(src="/public/site/img/pasarela/visa2.svg", alt="" width="40px")
+                    li.pasarela-info__li 
+                        img.pasarela-info__icon(src="/public/site/img/pasarela/visa2.svg", alt="" width="40px")
+                    li.pasarela-info__li 
+                        img.pasarela-info__icon(src="/public/site/img/pasarela/visa2.svg", alt="" width="40px")
+                    li.pasarela-info__li 
+                        img.pasarela-info__icon(src="/public/site/img/pasarela/visa2.svg", alt="" width="40px")
+                    li.pasarela-info__li 
+                        img.pasarela-info__icon(src="/public/site/img/pasarela/visa2.svg", alt="" width="40px")
+
+            .pasarela-info__row
+                h3.pasarela-info__h3 Sitio seguro
+                ul.pasarela-info__icons 
+                    li.pasarela-info__li 
+                        img.pasarela-info__icon(src="/public/site/img/pasarela/visa2.svg", alt="" width="40px")
+                    li.pasarela-info__li 
+                        img.pasarela-info__icon(src="/public/site/img/pasarela/visa2.svg", alt="" width="40px")
+
+
+
+
+
+

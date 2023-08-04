@@ -20,15 +20,26 @@ const { isAuthenticated, crearSlug } = require("../../utils/utils.functions")
 
 
 
+router.get("/producto-de-prueba", (req, res, next) => {//mostrar todos los productos en el ecommerce
+    ProductController.index((err, rows) => {
+        if (err) {
+            console.log("No hubo resultados")
+            return res.redirect("/")
+        }
+        
+        return res.render("site/producto")
+    })
+})
+
 
 router.get("/productos", (req, res, next) => {//mostrar todos los productos en el ecommerce
     ProductController.index((err, rows) => {
         if (err) {
             console.log("No hubo resultados")
-            return res.render("producto/index", { msg: "No hubo resultados" })
+            return res.redirect("/")
         }
         
-        res.render("producto/index", { rows })
+        return res.render("site/productos")
     })
 })
 

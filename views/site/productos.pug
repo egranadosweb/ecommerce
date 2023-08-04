@@ -1,0 +1,251 @@
+
+extends ./layout/layout__productos.pug
+
+block content
+
+    section.products 
+        .products__wrapper
+
+            .products__breadcrumbs
+                ul.products__breadcrumbs__ul 
+                    li.products__breadcrumbs__li
+                        a.products__breadcrumbs__a Inicio
+                    li.products__breadcrumbs__li
+                        a.products__breadcrumbs__a Impresoras
+                    li.products__breadcrumbs__li
+                    | Epson Officejet C520
+
+            .products__amount 
+                h3.products__amount__h3
+                    span.productos__encontrados 
+                    |  Productos encontrados
+
+            .products__container
+
+                .products__filters__desktop
+                    .products__filters__wrapper
+
+                        p.products__filters__caption Filtros
+                        
+                        .products__filter
+                                p.products__filter__name Precio
+                                .products__filter__group
+                                    label.products__filters__input-range-label(for="filterPrice") 1 - 
+                                    label.products__filters__input-range-label(for="filterPrice")
+                                    input.products__filters__input-range(type="range", min="1", max="1000000", id="filterPrice", value="1000" step="1")
+                        
+                        .products__filter__action__btn.btn.btn--primary Filtrar
+                                
+
+                .products__cards__wrapper
+
+                    .products__card(data-precio="1000000" data-marca="hp" data-categoria="tinta")
+
+                        figure.products__card__head
+                                img.products__card__img(src="/public/site/img/products/2.png", alt="")
+                        .products__card__body
+                            h2.products__card__title Impresora Hp Officejet C350
+                            .products__card__price
+                                p.products__card__old__price 900000
+                                p.products__card__price 1000000
+                            .products__card__shipping 
+                                p.products__card__shipping__text 
+                                    img.products__card__shipping__img(src="/public/site/img/icons/shipping.png", alt="" width="19px")
+                                    span.products__card__shipping__span Envío a toda Colombia
+                            .products__card__cta 
+                                a.products__card__cta__link.btn.btn--primary(href="")  Más información
+
+
+                    .products__card(data-precio="100000" data-marca="epson" data-categoria="tinta")
+
+                        figure.products__card__head
+                                img.products__card__img(src="/public/site/img/products/1.jpg", alt="")
+                        .products__card__body
+                            h2.products__card__title Impresora Epson Officejet C350
+                            .products__card__price
+                                p.products__card__old__price 900000
+                                p.products__card__price 100000
+                            .products__card__shipping 
+                                p.products__card__shipping__text 
+                                    img.products__card__shipping__img(src="/public/site/img/icons/shipping.png", alt="" width="19px")
+                                    span.products__card__shipping__span Envío a toda Colombia
+                            .products__card__cta 
+                                a.products__card__cta__link.btn.btn--primary(href="")  Más información
+
+                    .products__card(data-precio="700000" data-marca="lexmark" data-categoria="laser")
+
+                        figure.products__card__head
+                                img.products__card__img(src="/public/site/img/products/1.jpg", alt="")
+                        .products__card__body
+                            h2.products__card__title Impresora Epson Officejet C350
+                            .products__card__price
+                                p.products__card__old__price 900000
+                                p.products__card__price 700000
+                            .products__card__shipping 
+                                p.products__card__shipping__text 
+                                    img.products__card__shipping__img(src="/public/site/img/icons/shipping.png", alt="" width="19px")
+                                    span.products__card__shipping__span Envío a toda Colombia
+                            .products__card__cta 
+                                a.products__card__cta__link.btn.btn--primary(href="")  Más información
+
+
+                    .products__card(data-precio="300000" data-marca="cannon" data-categoria="tinta")
+
+                        figure.products__card__head
+                                img.products__card__img(src="/public/site/img/products/1.jpg", alt="")
+                        .products__card__body
+                            h2.products__card__title Impresora Epson Officejet C350
+                            .products__card__price
+                                p.products__card__old__price 900000
+                                p.products__card__price 300000
+                            .products__card__shipping 
+                                p.products__card__shipping__text 
+                                    img.products__card__shipping__img(src="/public/site/img/icons/shipping.png", alt="" width="19px")
+                                    span.products__card__shipping__span Envío a toda Colombia
+                            .products__card__cta 
+                                a.products__card__cta__link.btn.btn--primary(href="")  Más información
+
+                    .products__card(data-precio="400000" data-marca="epson" data-categoria="pos")
+
+                        figure.products__card__head
+                                img.products__card__img(src="/public/site/img/products/1.jpg", alt="")
+                        .products__card__body
+                            h2.products__card__title Impresora Epson Officejet C350
+                            .products__card__price
+                                p.products__card__old__price 900000
+                                p.products__card__price 400000
+                            .products__card__shipping 
+                                p.products__card__shipping__text 
+                                    img.products__card__shipping__img(src="/public/site/img/icons/shipping.png", alt="" width="19px")
+                                    span.products__card__shipping__span Envío a toda Colombia
+                            .products__card__cta 
+                                a.products__card__cta__link.btn.btn--primary(href="")  Más información
+                    
+                    .products__card(data-precio="200000" data-marca="epson" data-categoria="laser")
+
+                        figure.products__card__head
+                                img.products__card__img(src="/public/site/img/products/1.jpg", alt="")
+                        .products__card__body
+                            h2.products__card__title Impresora Epson Officejet C350
+                            .products__card__price
+                                p.products__card__old__price 900000
+                                p.products__card__price 200000
+                            .products__card__shipping 
+                                p.products__card__shipping__text 
+                                    img.products__card__shipping__img(src="/public/site/img/icons/shipping.png", alt="" width="19px")
+                                    span.products__card__shipping__span Envío a toda Colombia
+                            .products__card__cta 
+                                a.products__card__cta__link.btn.btn--primary(href="")  Más información
+
+                    .products__card(data-precio="500000" data-marca="hp" data-categoria="laser")
+
+                        figure.products__card__head
+                                img.products__card__img(src="/public/site/img/products/1.jpg", alt="")
+                        .products__card__body
+                            h2.products__card__title Impresora Epson Officejet C350
+                            .products__card__price
+                                p.products__card__old__price 900000
+                                p.products__card__price 500000
+                            .products__card__shipping 
+                                p.products__card__shipping__text 
+                                    img.products__card__shipping__img(src="/public/site/img/icons/shipping.png", alt="" width="19px")
+                                    span.products__card__shipping__span Envío a toda Colombia
+                            .products__card__cta 
+                                a.products__card__cta__link.btn.btn--primary(href="")  Más información
+
+                    .products__card(data-precio="600000" data-marca="cannon" data-categoria="laser")
+
+                        figure.products__card__head
+                                img.products__card__img(src="/public/site/img/products/1.jpg", alt="")
+                        .products__card__body
+                            h2.products__card__title Impresora Epson Officejet C350
+                            .products__card__price
+                                p.products__card__old__price 900000
+                                p.products__card__price 600000
+                            .products__card__shipping 
+                                p.products__card__shipping__text 
+                                    img.products__card__shipping__img(src="/public/site/img/icons/shipping.png", alt="" width="19px")
+                                    span.products__card__shipping__span Envío a toda Colombia
+                            .products__card__cta 
+                                a.products__card__cta__link.btn.btn--primary(href="")  Más información
+
+                    
+                    .products__card(data-precio="900000" data-marca="hp" data-categoria="pos")
+
+                        figure.products__card__head
+                                img.products__card__img(src="/public/site/img/products/2.png", alt="")
+                        .products__card__body
+                            h2.products__card__title Impresora Hp Officejet C350
+                            .products__card__price
+                                p.products__card__old__price 900000
+                                p.products__card__price 900000
+                            .products__card__shipping 
+                                p.products__card__shipping__text 
+                                    img.products__card__shipping__img(src="/public/site/img/icons/shipping.png", alt="" width="19px")
+                                    span.products__card__shipping__span Envío a toda Colombia
+                            .products__card__cta 
+                                a.products__card__cta__link.btn.btn--primary(href="")  Más información
+
+                    .products__card(data-precio="800000" data-marca="xerox" data-categoria="laser")
+
+                        figure.products__card__head
+                                img.products__card__img(src="/public/site/img/products/1.jpg", alt="")
+                        .products__card__body
+                            h2.products__card__title Impresora Epson Officejet C350
+                            .products__card__price
+                                p.products__card__old__price 900000
+                                p.products__card__price 800000
+                            .products__card__shipping 
+                                p.products__card__shipping__text 
+                                    img.products__card__shipping__img(src="/public/site/img/icons/shipping.png", alt="" width="19px")
+                                    span.products__card__shipping__span Envío a toda Colombia
+                            .products__card__cta 
+                                a.products__card__cta__link.btn.btn--primary(href="")  Más información
+
+                    
+                    .products__card(data-precio="1000000" data-marca="xerox" data-categoria="laser")
+
+                        figure.products__card__head
+                                img.products__card__img(src="/public/site/img/products/2.png", alt="")
+                        .products__card__body
+                            h2.products__card__title Impresora Hp Officejet C350
+                            .products__card__price
+                                p.products__card__old__price 900000
+                                p.products__card__price 1000000
+                            .products__card__shipping 
+                                p.products__card__shipping__text 
+                                    img.products__card__shipping__img(src="/public/site/img/icons/shipping.png", alt="" width="19px")
+                                    span.products__card__shipping__span Envío a toda Colombia
+                            .products__card__cta 
+                                a.products__card__cta__link.btn.btn--primary(href="")  Más información
+                            
+        .products__filters__movil
+
+            .products__fixed 
+
+                .products__filters__btn__wrapper
+                    button.products__filter__btn.btn Filtrar
+
+                .products__filters__drawer
+                    .products__filters__scroll
+                        .products__filters__drawer__wrapper.products__filters__wrapper
+                            p.products__filters__caption Filtros
+
+                            .products__filter
+                                p.products__filter__name Precio
+                                .products__filter__group
+                                    label.products__filters__input-range-label(for="filterPrice") 1 - 
+                                    label.products__filters__input-range-label(for="filterPrice")
+                                    input.products__filters__input-range(type="range", min="1", max="1000000", id="filterPrice", value="1000" step="1")
+                            
+                            .products__filter__action__btn.btn.btn--primary Filtrar
+                
+                .products__filters__bg
+                
+                
+
+
+                
+
+
+    

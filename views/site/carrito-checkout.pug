@@ -1,0 +1,145 @@
+
+extends ../layout/layout__checkout.pug
+
+block content 
+    section.carrito-checkout
+        .carrito-checkout__wrapper
+            h2.carrito-checkout__h2 Tu pedido
+            .carrito-checkout__body
+
+                .carrito-checkout__container.carrito__container
+
+                .carrito-checkout__finish
+                    .carrito-checkout__row
+                        .carrito__checkout__label Subtotal:
+                        .carrito__checkout__subtotal.carrito__subtotal
+
+                        .carrito__checkout__label Gastos de envío:
+                        .carrito__checkout__shipping.carrito__shipping
+
+                        .carrito__checkout__label Total:
+                        .carrito__checkout__total.carrito__total
+                    .carrito-checkout__row
+                        button.carrito-checkout__btn.carrito__end-btn.btn.btn--primary(type="button" disabled) Finalizar Compra
+                    .carrito-checkout__row
+                        .carrito-checkout__form-check
+                            input.carrito-checkout__check-input(type="checkbox" id="carrito__checkout")
+                            label.carrito-checkout__check-label(for="carrito__checkout") Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quasi officiis, vitae tempore at dolores veniam eligendi in.
+                    .carrito-checkout__row
+                        figure.carrito-checkout__figure 
+                            img.carrito-checkout__img(src="./assets/img/comodines/carrito-checkout2.png" alt="" width="700px" height="auto")
+
+
+    section.relacionados
+
+        .relacionados__wrapper
+
+            h2.relacionados__h2 Acompaña tu compra con:
+
+            .carousel__main__wrapper
+                .carousel__wrapper.carousel__productos
+                    .carousel__card
+                        .carousel__card__wrapper
+                            figure.carousel__card__box__img
+                                img.carousel__card__img(src="./assets/img/productos/1.png" alt="" height="100px")
+                            h3.carousel__card__title Disco Solido Kingston 240GB
+                            .carousel__card__box__price
+                                p.carousel__card__price__before
+                                    span $170.000
+                                p.carousel__card__price 
+                                    span $150.000
+                            .carousel__card__box__shipping
+                                p.carousel__card__shipping
+                                    img.carousel__card__shipping-logo(src="./assets/img/icons/shipping.png" alt="" width="30px")
+                                    span Envío a toda Colombia
+                            //- p.carousel__card__text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            a.carousel__card__btn.btn.btn--primary.btn__carrito(href="product.html") Más información
+
+                    .carousel__card
+                        .carousel__card__wrapper
+                            figure.carousel__card__box__img
+                                img.carousel__card__img(src="./assets/img/productos/1.png" alt="" height="100px")
+                            h3.carousel__card__title Disco Solido Kingston 240GB
+                            .carousel__card__box__price
+                                p.carousel__card__price__before
+                                    span $170.000
+                                p.carousel__card__price 
+                                    span $150.000
+                            .carousel__card__box__shipping
+                                p.carousel__card__shipping
+                                    img.carousel__card__shipping-logo(src="./assets/img/icons/shipping.png" alt="" width="30px")
+                                    span Envío a toda Colombia
+                            //- p.carousel__card__text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            a.carousel__card__btn.btn.btn--primary(href="product.html") Más información
+
+                    .carousel__card
+                        .carousel__card__wrapper
+                            figure.carousel__card__box__img
+                                img.carousel__card__img(src="./assets/img/productos/1.png" alt="" height="100px")
+                            h3.carousel__card__title Disco Solido Kingston 240GB
+                            .carousel__card__box__price
+                                p.carousel__card__price__before
+                                    span $170.000
+                                p.carousel__card__price 
+                                    span $150.000
+                            .carousel__card__box__shipping
+                                p.carousel__card__shipping
+                                    img.carousel__card__shipping-logo(src="./assets/img/icons/shipping.png" alt="" width="30px")
+                                    span Envío a toda Colombia
+                            //- p.carousel__card__text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            a.carousel__card__btn.btn.btn--primary(href="product.html") Más información
+                    
+                    .carousel__card
+                        .carousel__card__wrapper
+                            figure.carousel__card__box__img
+                                img.carousel__card__img(src="./assets/img/productos/1.png" alt="" height="100px")
+                            h3.carousel__card__title Disco Solido Kingston 240GB
+                            .carousel__card__box__price
+                                p.carousel__card__price__before
+                                    span $170.000
+                                p.carousel__card__price 
+                                    span $150.000
+                            .carousel__card__box__shipping
+                                p.carousel__card__shipping
+                                    img.carousel__card__shipping-logo(src="./assets/img/icons/shipping.png" alt="" width="30px")
+                                    span Envío a toda Colombia
+                            //- p.carousel__card__text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            a.carousel__card__btn.btn.btn--primary(href="product.html") Más información
+
+                    .carousel__card__breadcrumbs
+                        .carousel__card__bradcrumb
+                        .carousel__card__bradcrumb
+                        .carousel__card__bradcrumb
+                        .carousel__card__bradcrumb
+                        .carousel__card__bradcrumb
+                        .carousel__card__bradcrumb
+
+                    figure.carousel__card__arrow.carousel__card__left-arrow
+                        img.carousel__card__arrow-logo(src="./assets/img/servicios/arrow-left.png" alt="")
+                    figure.carousel__card__arrow.carousel__card__right-arrow.carousel__card__arrow--right
+                        img.carousel__card__arrow-logo(src="./assets/img/servicios/arrow-right.png" alt="")
+
+
+    section.pasarela-info 
+        .pasarela-info__wrapper 
+            .pasarela-info__row
+                h3.pasarela-info__h3 Medios de pago
+                ul.pasarela-info__icons 
+                    li.pasarela-info__li 
+                        img.pasarela-info__icon(src="./assets/img/pasarela/visa2.svg", alt="" width="40px")
+                    li.pasarela-info__li 
+                        img.pasarela-info__icon(src="./assets/img/pasarela/visa2.svg", alt="" width="40px")
+                    li.pasarela-info__li 
+                        img.pasarela-info__icon(src="./assets/img/pasarela/visa2.svg", alt="" width="40px")
+                    li.pasarela-info__li 
+                        img.pasarela-info__icon(src="./assets/img/pasarela/visa2.svg", alt="" width="40px")
+                    li.pasarela-info__li 
+                        img.pasarela-info__icon(src="./assets/img/pasarela/visa2.svg", alt="" width="40px")
+
+            .pasarela-info__row
+                h3.pasarela-info__h3 Sitio seguro
+                ul.pasarela-info__icons 
+                    li.pasarela-info__li 
+                        img.pasarela-info__icon(src="./assets/img/pasarela/visa2.svg", alt="" width="40px")
+                    li.pasarela-info__li 
+                        img.pasarela-info__icon(src="./assets/img/pasarela/visa2.svg", alt="" width="40px")

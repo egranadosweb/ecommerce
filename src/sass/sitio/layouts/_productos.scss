@@ -1,0 +1,13 @@
+.productos{
+    background-color: $brandColor;
+}
+.productos__wrapper{
+    padding: 4rem 1rem;
+    @include responsive("desktop"){
+        max-width: 1100px;
+        margin: auto;
+    }
+}
+.productos__h2{
+    color: white;
+}

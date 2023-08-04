@@ -1,0 +1,192 @@
+
+extends ./layout/layout.pug
+
+block content
+    include ./partials/banner_index.pug
+
+    include ./partials/servicios_index.pug
+
+    section.soporte 
+        img.soporte__shape(src="/public/site/img/comodines/tuerca.png" alt="")
+        .soporte__wrapper 
+            figure.soporte__box__left
+                img.soporte__img(src="/public/site/img/soporte-colombia/mapa-de-colombia.png" alt="" width="150px")
+            .soporte__box__right
+                p.soporte__texto Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum beatae assumenda sit
+                a.soporte__btn.btn.btn--primary(href="#") Llamar
+
+
+
+    include ./partials/productos_index.pug
+
+
+    section.metodologia 
+        .metodologia__wrapper 
+            h2.metodologia__h2.title Metódologia
+            span.metodologia__caption
+                span.metodologia__caption__span 3C 
+                | nuestra metodológia de trabajo está basada en las 3 C
+
+            .metodologia__box
+                .metodologia__box__text 
+                    span.metodologia__text__span Confianza
+                    p.metodologia__text__p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptatibus natus cupiditate fuga quaerat, eveniet provident praesentium
+                figure.metodologia__box__img
+                    img.metodologia__img.metodologia__img__confianza(src="/public/site/img/metodologia/confianza.png" alt="" width="229px")
+
+            .metodologia__box.metodologia__box--right
+                .metodologia__box__text 
+                    span.metodologia__text__span Calidad
+                    p.metodologia__text__p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptatibus natus cupiditate fuga quaerat, eveniet provident praesentium
+                figure.metodologia__box__img
+                    img.metodologia__img.metodologia__img__mejor-empleado(src="/public/site/img/metodologia/mejor-empleado.png" alt="" width="300px")
+
+            .metodologia__box
+                .metodologia__box__text 
+                    span.metodologia__text__span Celeridad
+                    p.metodologia__text__p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptatibus natus cupiditate fuga quaerat, eveniet provident praesentium 
+                figure.metodologia__box__img
+                    img.metodologia__img.metodologia__img__hombre-cohete(src="/public/site/img/metodologia/hombre-en-un-cohete.png" alt="" width="296px")
+
+
+
+
+
+
+
+    section.contactarnos
+        img.contactarnos__shape(src="/public/site/img/comodines/tuerca.png" alt="") 
+        .contactarnos__wrapper 
+            .contactarnos__box__img 
+                img.contactarnos__img(src="/public/site/img/contactarnos/pc-windows.png" alt="" width="150px")
+            .contactarnos__box__text
+                p.contactarnos__caption ¿Problemas con tu computador o necesitas instalar un programa particular?
+                p.contactarnos__cta Nosotros te ayudamos
+                a.contactarnos__btn.btn.btn--secondary(href="#") Llamar
+
+
+
+
+
+
+
+    section.empresas 
+        .empresas__wrapper 
+            h2.empresas__title.title Servicios a Empresas
+            figure.empresas__box__img 
+                img.empresas__img(src="/public/site/img/empresas/servicio-soporte.png" alt="" width="350px")
+            p.empresas__caption
+                span.empresas__caption__span 9 Años 
+                | prestando servicios a empresas de diferentes nichos nos han dotado de una invaluable experiencia que colocamos al servicio de nuestros clientes
+
+
+
+
+
+
+
+    section.claro 
+        .claro__wrapper
+            .claro__box__img 
+                img.claro__img(src="/public/site/img/empresas/claro-logo.png" alt="" width="600px")
+            .claro__box__text 
+                p.claro__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe cupiditate sunt, aperiam modi placeat, iure maxime eligendi cumque accusantium similique omnis aut ad itaque ipsum.
+                a.claro__btn.btn.btn--primary Preguntar por convenio
+
+
+
+
+
+
+
+    section.empresasservicios
+        .empresasservicios__wrapper 
+
+            .empresasservicios__top 
+                span.empresasservicios__caption Algunos de nuestros servicios a empresas son los siguientes:
+                figure.empresasservicios__box__img
+                    img.emrpesasservicios__img(src="/public/site/img/empresas/trabajo-remoto.png" alt="" width="260px")
+
+
+            .empresasservicios__bottom
+                .empresasservicios__card__wrapper 
+                    .empresasservicios__card.animation--intersecting
+                        img.empresasservicios__card__shape(src="/public/site/img/comodines/tuerca.png" alt="") 
+                        h3.empresasservicios__card_title Virtualización de sistemas
+                        figure.empresasservicios__card__box__img 
+                            img.empresasservicios__card__img(src="/public/site/img/empresas/reparacion-de-computadores.png" alt="")
+                        .empresasservicios__card__body
+                            h4.empresasservicios__card__caption Computadores e impresoras
+                            p.empresasservicios__card__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, explicabo exercitationem vero quae ex voluptatem, nulla, quod molestias impedit rerum excepturi in tempora aperiam soluta.
+                        a.empresasservicios__card__btn.btn.btn--primary Solicitar
+
+                    .empresasservicios__card.animation--intersecting
+                        img.empresasservicios__card__shape(src="/public/site/img/comodines/tuerca.png" alt="") 
+                        h3.empresasservicios__card_title Virtualización de sistemas
+                        figure.empresasservicios__card__box__img 
+                            img.empresasservicios__card__img(src="/public/site/img/empresas/reparacion-de-computadores.png" alt="")
+                        .empresasservicios__card__body
+                            h4.empresasservicios__card__caption Computadores e impresoras
+                            p.empresasservicios__card__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, explicabo exercitationem vero quae ex voluptatem, nulla, quod molestias impedit rerum excepturi in tempora aperiam soluta.
+                        a.empresasservicios__card__btn.btn.btn--primary Solicitar
+
+                    .empresasservicios__card.animation--intersecting
+                        img.empresasservicios__card__shape(src="/public/site/img/comodines/tuerca.png" alt="") 
+                        h3.empresasservicios__card_title Virtualización de sistemas
+                        figure.empresasservicios__card__box__img 
+                            img.empresasservicios__card__img(src="/public/site/img/empresas/reparacion-de-computadores.png" alt="")
+                        .empresasservicios__card__body
+                            h4.empresasservicios__card__caption Computadores e impresoras
+                            p.empresasservicios__card__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, explicabo exercitationem vero quae ex voluptatem, nulla, quod molestias impedit rerum excepturi in tempora aperiam soluta.
+                        a.empresasservicios__card__btn.btn.btn--primary Solicitar
+
+                    .empresasservicios__card.animation--intersecting
+                        img.empresasservicios__card__shape(src="/public/site/img/comodines/tuerca.png" alt="") 
+                        h3.empresasservicios__card_title Virtualización de sistemas
+                        figure.empresasservicios__card__box__img 
+                            img.empresasservicios__card__img(src="/public/site/img/empresas/reparacion-de-computadores.png" alt="")
+                        .empresasservicios__card__body
+                            h4.empresasservicios__card__caption Computadores e impresoras
+                            p.empresasservicios__card__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, explicabo exercitationem vero quae ex voluptatem, nulla, quod molestias impedit rerum excepturi in tempora aperiam soluta.
+                        a.empresasservicios__card__btn.btn.btn--primary Solicitar
+
+                    .empresasservicios__card.animation--intersecting
+                        img.empresasservicios__card__shape(src="/public/site/img/comodines/tuerca.png" alt="") 
+                        h3.empresasservicios__card_title Virtualización de sistemas
+                        figure.empresasservicios__card__box__img 
+                            img.empresasservicios__card__img(src="/public/site/img/empresas/reparacion-de-computadores.png" alt="")
+                        .empresasservicios__card__body
+                            h4.empresasservicios__card__caption Computadores e impresoras
+                            p.empresasservicios__card__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, explicabo exercitationem vero quae ex voluptatem, nulla, quod molestias impedit rerum excepturi in tempora aperiam soluta.
+                        a.empresasservicios__card__btn.btn.btn--primary Solicitar
+
+                    .empresasservicios__card.animation--intersecting
+                        img.empresasservicios__card__shape(src="/public/site/img/comodines/tuerca.png" alt="") 
+                        h3.empresasservicios__card_title Virtualización de sistemas
+                        figure.empresasservicios__card__box__img 
+                            img.empresasservicios__card__img(src="/public/site/img/empresas/reparacion-de-computadores.png" alt="")
+                        .empresasservicios__card__body
+                            h4.empresasservicios__card__caption Computadores e impresoras
+                            p.empresasservicios__card__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, explicabo exercitationem vero quae ex voluptatem, nulla, quod molestias impedit rerum excepturi in tempora aperiam soluta.
+                        a.empresasservicios__card__btn.btn.btn--primary Solicitar
+
+
+
+
+
+
+
+    section.pago 
+        .pago__wrapper 
+            .pago__top 
+                p.pago__title Métodos de 
+                    span Pago
+            .pago__bottom 
+                figure.pago__figure
+                    img.pago__img(src="/public/site/img/pago/bancos-logos.png" alt="" width="295px")
+                    //- img.pago__img(src="./assets/img/empresas/bancolombia-logo.png" alt="")
+                    //- img.pago__img(src="./assets/img/empresas/nequi-logo.png" alt="")
+
+
+
+

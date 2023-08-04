@@ -1,0 +1,123 @@
+header.header
+
+    .header__top__wrapper 
+
+        //El logo se comparte en los dos menus, movil y desktop
+        figure.header__box__logo
+            a.header__logo__link(href="#")
+                img.header__logo(src="./assets/img/logo/logo.png" alt="")
+
+        //menu para dekstop, display none en moviles
+        nav.header__nav__desktop 
+            ul.header__nav__desktop__list 
+                li.header__nav__desktop__li 
+                    a.header__nav__desktop__link(href="#") Inicio
+                li.header__nav__desktop__li.header__nav__desktop__li--with-submenu
+                    a.header__nav__desktop__link(href="#") Servicios
+                    nav.header__nav__desktop__submenu
+                        ul.header__nav__desktop__submenu__list
+                            li.header__nav__desktop__submenu__li 
+                                a.header__nav__desktop__submenu__link(href="") Submenu 1
+                            li.header__nav__desktop__submenu__li 
+                                a.header__nav__desktop__submenu__link(href="") Submenu 1
+                            li.header__nav__desktop__submenu__li 
+                                a.header__nav__desktop__submenu__link(href="") Submenu 1
+                li.header__nav__desktop__li 
+                    a.header__nav__desktop__link(href="#") Productos
+
+                li.header__nav__desktop__li.header__nav__desktop__li--with-submenu
+                    a.header__nav__desktop__link(href="#") Servicios a empresas
+                    nav.header__nav__desktop__submenu
+                        ul.header__nav__desktop__submenu__list
+                            li.header__nav__desktop__submenu__li 
+                                a.header__nav__desktop__submenu__link(href="") empresas 1
+                            li.header__nav__desktop__submenu__li 
+                                a.header__nav__desktop__submenu__link(href="") empresas 2
+                            li.header__nav__desktop__submenu__li 
+                                a.header__nav__desktop__submenu__link(href="") empresas 3
+                li.header__nav__desktop__li 
+                    a.header__nav__desktop__link(href="#") Quien somos
+
+        //- .header__cta__desktop 
+        //-     ul.header__cta__desktop__list 
+
+        //-         li.header__cta__desktop__li 
+        //-             a.header__cta__desktop__link.btn.btn--primary(href="#") Escribir
+        //-         li.header__cta__desktop__li
+        //-             a.header__cta__desktop__link(href="#")
+        //-                 figure.header__cta__desktop__li__figure.btn__show__carrito(data-menu=2)
+        //-                     img.header__cta__desktop__icon(src="./assets/img/icons/carrito-rojo.png" alt="" width="40px" height="40px")
+
+
+
+
+        //menu para movil
+
+        div.header__menumovil__group__icon
+            //- figure.header__menumovil__figure.header__menumovil__figure__carrito.btn__show__carrito(data-menu=1)
+            //-     img.header__menumovil__icon(src="./assets/img/icons/carrito-rojo.png" alt="" width="40px" height="40px")
+            //- figure.header__menumovil__figure.header__menumovil__figure__menu#menuMovilIcon
+            //-     img.header__menumovil__icon.header__menumovil__icon--animado(src="./assets/img/header/menu-logo.png" alt="" width="40px" height="40px")
+
+
+        div.header__drawer#menuMovil
+            a.header__nav__btn__close(href="#")#header__nav__btn__close
+                span X
+
+            .header__drawer__content
+                .header__drawer__bar
+                    figure.header__drawer__figure__logo
+                        a.header__drawer__logo__link(href="#") 
+                            img.header__drawer__logo(src="./assets/img/logo/logo-blanco.png")
+                nav.header__drawer__nav
+                    ul.header__nav__ul
+                        li.header__nav__ul__li 
+                            a.header__nav__link(href="#") Inicio
+                        li.header__nav__ul__li.header__nav__ul__li__with-submenu 
+                            a.header__nav__link(href="#").header__submenu__caption Servicios
+                            ul.header__nav__submenu
+                                li.header__nav__submenu__li
+                                    a.header__nav__submenu__link(href="#") Item 1
+                                li.header__nav__submenu__li
+                                    a.header__nav__submenu__link(href="#") Item 12
+                                li.header__nav__submenu__li
+                                    a.header__nav__submenu__link(href="#") Item 13
+                                li.header__nav__submenu__li
+                                    a.header__nav__submenu__link(href="#") Item 1
+                                li.header__nav__submenu__li
+                                    a.header__nav__submenu__link(href="#") Item 12
+                                li.header__nav__submenu__li
+                                    a.header__nav__submenu__link(href="#") Item 13
+
+                        li.header__nav__ul__li.header__nav__ul__li__with-submenu
+                            a.header__nav__link(href="#").header__submenu__caption Servicios a empresas
+                            ul.header__nav__submenu
+                                li.header__nav__submenu__li
+                                    a.header__nav__submenu__link(href="#") Mantenimiento correctivo y preventivo de computadores, servidores e impresoras
+                                li.header__nav__submenu__li
+                                    a.header__nav__submenu__link(href="#") Mantenimiento correctivo y preventivo de redes de datos
+                                li.header__nav__submenu__li
+                                    a.header__nav__submenu__link(href="#") Instalación y configuración de Windows Server
+                                li.header__nav__submenu__li
+                                    a.header__nav__submenu__link(href="#") Virtualziación de sistemas operativos
+                                li.header__nav__submenu__li
+                                    a.header__nav__submenu__link(href="#") Configuración de Servicios de Escritorio remoto
+                                li.header__nav__submenu__li
+                                    a.header__nav__submenu__link(href="#") Convenios de Soporte técnico mensual
+                        li.header__nav__ul__li 
+                            a.header__nav__link(href="#").header__submenu__caption Quien somos
+
+            .header__drawer__cta
+                ul.header__drawer__cta__ul
+                    li.header__drawer__cta__li
+                        a.header__drawer__cta__a.btn.btn--secondary(href="#") cta1
+                        a.header__drawer__cta__a.btn.btn--secondary(href="#") cta2
+
+            .header__drawer__redes
+                figure.drawer__social__figure
+                    a.drawer__social__a(href="#")
+                        img.drawer__social__img(src="./assets/img/social/youtube-logo-blanco.png" alt="")
+                    a.drawer__social__a(href="#")
+                        img.drawer__social__img(src="./assets/img/social/twitter-logo-blanco.png" alt="")
+                    a.drawer__social__a(href="#")
+                        img.drawer__social__img(src="./assets/img/social/tiktok-logo-blanco.png" alt="")

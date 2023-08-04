@@ -1,0 +1,172 @@
+
+.empresas{}
+.empresas__wrapper {
+    padding: 4rem 1rem;
+    @include responsive("desktop"){
+        max-width: 1100px;
+        margin: auto;
+    }
+}
+.empresas__title{}
+.empresas__box__img{
+    padding: 0 0 3rem;
+    text-align: center;
+}
+.empresas__img{
+    
+}
+.empresas__caption{
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 34px;
+    color: #202124;
+    @include responsive("tablet"){
+        padding: 0 5rem;
+    }
+    @include responsive("desktop"){
+        padding: 0 7rem;
+    }
+    @include responsive("large"){
+        padding: 0 9rem;
+    }
+}
+.empresas__caption__span {
+    display: block;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 4rem;
+    line-height: 74px;
+    color: $brandColor;
+}
+
+
+
+.claro{
+    background-color: $contrastColor;
+}
+.claro__wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5rem 1rem;
+    @include responsive("desktop"){
+        max-width: 1100px;
+        margin: auto;
+    }
+}
+.claro__box__img {
+    align-self: center;
+    text-align: center;
+}
+.claro__img{
+    width: 80%;
+    @include responsive("tablet"){
+        width: 70%;
+    }
+}
+.claro__box__text {
+}
+.claro__text{
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    @include responsive("tablet"){
+        padding-right: 2rem;
+    }
+}
+.claro__btn{
+    width: auto;
+    height: auto;
+}
+
+
+
+
+.empresasservicios{}
+.empresasservicios__wrapper{
+    padding: 4rem 1rem;
+    
+    @include responsive("desktop"){
+        max-width: 1100px;
+        margin: auto;
+    }
+}
+.empresasservicios__top{
+    text-align: center;
+    padding: 1rem 0 3rem;
+}
+.empresasservicios__caption{
+    font-size: 1.2rem;
+    display: block;
+    color: #202124;
+}
+.empresasservicios__box__img{
+    text-align: center;
+    padding: 3rem 0 1rem;
+}
+.emrpesasservicios__img{
+
+}
+.empresasservicios__bottom{}
+.empresasservicios__card__wrapper{
+    @include responsive("pretablet"){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1rem;
+    }
+    @include responsive("desktop"){
+        grid-template-columns:1fr 1fr 1fr;
+        grid-column-gap: 1.5rem;
+    }
+    @include responsive("large"){
+        grid-column-gap: 2rem;
+    }
+}
+.empresasservicios__card{
+    position: relative;
+    padding:1rem 2rem;
+    padding-bottom: 3rem;
+    //border: 1px solid rgb(204, 204, 204);
+    //box-shadow: 0px 0px 8px gray;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    transition: all 2s;
+}
+.empresasservicios__card__shape{
+    position: absolute;
+    width: 250px;
+    bottom: 0;
+    right: 0;
+    transform: translateX(50%) translateY(50%);
+    opacity: .1;
+    @include responsive("pretablet"){
+        width: 180px;
+    }
+    @include responsive("pretablet"){
+        width: 250px;
+    }
+    @include responsive("large"){
+        width: 300px;
+    }
+}
+.empresasservicios__card_title{
+    font-size: .9rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+.empresasservicios__card__box__img{
+    text-align: center;
+}
+.empresasservicios__card__img{
+    width: 100%;
+}
+.empresasservicios__card__body{}
+.empresasservicios__card__caption{
+    font-size: 1.2rem;
+    color: #202124;
+    margin-bottom: 1.5rem;
+}
+.empresasservicios__card__text{
+    margin-bottom: 2rem;
+}
+.empresasservicios__card__btn{}
